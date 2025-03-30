@@ -12,33 +12,33 @@ from openpyxl import Workbook
 import pandas as pd
 
 # >> input parameters
-T_s = float(input("T_s (in K) = ")) # Temperature of the surface of magma ocean in K (e.g., 7154)
-T_mb = float(input("T_mb (in K) = ")) # Temperature of the bottom of magma ocean's boundary layer in K (e.g., 7354)
-T_ab = float(input("T_ab (in K) = ")) # Temperature of the top of atmosphere's boundary layer in K (e.g., 7154)
-R_mo = float(input("R_mo (in km) = ")) # Depth of the magma ocean in km (e.g., 2000)
-M = float(input("M (in kg) = ")) # Mass of the proto-Earth in e24 kg (e.g., 5.9202*1e24 )
-R0 = float(input("R0 (in km) = ")) # Radius of the proto-Earth in km (e.g., 6371)
-Ma = float(input("Ma (in kg) = ")) # Mass of the primary atmosphere in e21kg (e.g., 5.9202* 1e21)
+T_s = float(input("T_s (in K) = "))
+T_mb = float(input("T_mb (in K) = "))
+T_ab = float(input("T_ab (in K) = "))
+R_mo = float(input("R_mo (in km) = ")) 
+M = float(input("M (in kg) = ")) 
+R0 = float(input("R0 (in km) = "))
+Ma = float(input("Ma (in kg) = "))
 # << input parameters
 
-k_mb = 2  # Thermal conductivity in W*K-1*m-1
-rou_mb = 4000  # Magma ocean density in kg*m-3
-alpha_mb = 5e-5  # Volume expansion coefficient in K-1
-eta_mb = 0.1  # Dynamic viscosity in pa*s 
-cp_mb = 5000  # Specific heat of the mantle in J*K*kg-1
-G = 6.67259e-11  # Gravitational constant in m3*kg-1*s-2
-K = 1  # Reduction factor in m2*s-1
-kB = 1.381e-23  # Boltzmann's constant in m2*kg*s-2*K-1
-gamma = 5 / 3  # Heat capacity ratio
-gamma_0 = 4 / 3  # Reference heat capacity ratio
-NA = 6.02214076 * 10 ** 23  # Avogadro's constant
-R = 8.314  # Gas constant in J* mol-1 *K-1
-xi1 = 0.5  # The efficiency of mass loss
-kappa_th = 1  # Thermal opacity of molecular hydrogen in m2*kg-1
-sigma = 5.67 * 10 ** (-8)  # Stefan-Boltamann constant in W*m-2*K-4
-aE = 1e3 * 1.496 * 1e8  # Semi-major axis of the Earth in m
-M_sun = 1.989e30  # Mass of the Sun in kg
-L = 0.7 * 3.845 * 1e26  # Luminosity of the young Sun
+k_mb = 2 
+rou_mb = 4000 
+alpha_mb = 5e-5 
+eta_mb = 0.1  
+cp_mb = 5000 
+G = 6.67259e-11 
+K = 1  
+kB = 1.381e-23  
+gamma = 5 / 3 
+gamma_0 = 4 / 3 
+NA = 6.02214076 * 10 ** 23  
+R = 8.314 
+xi1 = 0.5 
+kappa_th = 1  
+sigma = 5.67 * 10 ** (-8) 
+aE = 1e3 * 1.496 * 1e8 
+M_sun = 1.989e30 
+L = 0.7 * 3.845 * 1e26  
 
 delta_t = 1  # Time step in Myrs
 
